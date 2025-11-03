@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Solar System</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, black 60%, #020202);
+      overflow: hidden;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 600px;
+      height: 600px;
+    }
+
+    
+    .sun {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(yellow, orange);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 50px 20px yellow;
+    }
+
+    
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform-origin: center;
+    }
+
+    
+    .mercury {
+      width: 20px;
+      height: 20px;
+      background-color: gray;
+      animation: orbit1 4s linear infinite;
+    }
+
+   
+    .venus {
+      width: 25px;
+      height: 25px;
+      background-color: goldenrod;
+      animation: orbit2 7s linear infinite;
+    }
+
+   
+    .earth {
+      width: 30px;
+      height: 30px;
+      background-color: deepskyblue;
+      animation: orbit3 10s linear infinite;
+    }
+
+   
+    .mars {
+      width: 25px;
+      height: 25px;
+      background-color: tomato;
+      animation: orbit4 15s linear infinite;
+    }
+
+    
+    .jupiter {
+      width: 50px;
+      height: 50px;
+      background-color: peru;
+      animation: orbit5 20s linear infinite;
+    }
+
+    
+    .saturn {
+      width: 45px;
+      height: 45px;
+      background-color: khaki;
+      border: 3px solid goldenrod;
+      border-radius: 50%;
+      animation: orbit6 25s linear infinite;
+    }
+
+    
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .orbit1 { width: 150px; height: 150px;
+     }
+    .orbit2 { width: 220px; height: 220px;
+     }
+    .orbit3 { width: 300px; height: 300px;
+     }
+    .orbit4 { width: 380px; height: 380px;
+     }
+    .orbit5 { width: 460px; height: 460px;
+     }
+    .orbit6 { width: 540px; height: 540px; }
+
+    
+    @keyframes orbit1 {
+      from { transform: rotate(0deg) translateX(75px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(75px) rotate(-360deg); }
+    }
+
+    @keyframes orbit2 {
+      from { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
+    }
+
+    @keyframes orbit3 {
+      from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    @keyframes orbit4 {
+      from { transform: rotate(0deg) translateX(190px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(190px) rotate(-360deg); }
+    }
+
+    @keyframes orbit5 {
+      from { transform: rotate(0deg) translateX(230px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(230px) rotate(-360deg); }
+    }
+
+    @keyframes orbit6 {
+      from { transform: rotate(0deg) translateX(270px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(270px) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+    <div class="orbit orbit3"></div>
+    <div class="orbit orbit4"></div>
+    <div class="orbit orbit5"></div>
+    <div class="orbit orbit6"></div>
+
+    
+    <div class="planet mercury"></div>
+    <div class="planet venus"></div>
+    <div class="planet earth"></div>
+    <div class="planet mars"></div>
+    <div class="planet jupiter"></div>
+    <div class="planet saturn"></div>
+  </div>
+</body>
+</html>
